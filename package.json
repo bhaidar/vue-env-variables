@@ -1,6 +1,6 @@
 {
   "name": "vue-env-variables",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An environment variable loader for vue 3 apps.",
   "private": false,
   "main": "dist/vue-env-variables.common.js",
@@ -18,7 +18,8 @@
   "bugs": "https://github.com/bhaidar/vue-env-variables/issues",
   "homepage": "https://github.com/bhaidar/vue-env-variables#readme",
   "files": [
-    "dist/*.js", "dist/*.js.map"
+    "dist/*.js",
+    "dist/*.js.map"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
