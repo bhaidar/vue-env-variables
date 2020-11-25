@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import VueEnvVariables from './install';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// make use of the plugin
+app.use(VueEnvVariables);
+
+app.mount('#app');

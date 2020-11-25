@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { inject } from 'vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
+  inject: ['env'],
+  created() {
+    console.log({ optionsApi: this.$env, provider: this.env });
   },
-}
+  setup() {
+    const envVariables = inject('env');
+    console.log({ compositionApi: envVariables });
+  },
+};
 </script>
 
 <style>
