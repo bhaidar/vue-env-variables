@@ -1,19 +1,22 @@
 <template>
-  <div></div>
+  <div>{{ envVariables2 }}</div>
 </template>
 
 <script>
 import { inject } from 'vue';
+import { useEnv, envSymbol } from './install';
 
 export default {
   name: 'App',
-  inject: ['env'],
   created() {
-    console.log({ optionsApi: this.$env, provider: this.env });
+    console.log({ optionsApi: this.$env });
   },
   setup() {
-    const envVariables = inject('env');
-    console.log({ compositionApi: envVariables });
+    const envVariables = inject(envSymbol);
+    console.log(envVariables);
+
+    const envVariables2 = useEnv();
+    return { envVariables2 };
   },
 };
 </script>
