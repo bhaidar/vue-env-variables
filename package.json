@@ -1,6 +1,6 @@
 {
   "name": "vue-env-variables",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "An environment variable loader for vue 3 apps.",
   "private": false,
   "main": "dist/vue-env-variables.common.js",
