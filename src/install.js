@@ -10,7 +10,7 @@ export default {
     const env = process.env;
 
     // get an object of all vue variables
-    const vueVariables = getVueEnvVariables(env)
+    const vueVariables = getVueEnvVariables(env);
 
     // make $env property available to all components using Options API
     app.config.globalProperties.$env = vueVariables || {};
