@@ -1,22 +1,17 @@
 <template>
-  <div>{{ envVariables2 }}</div>
+  <div class="app">
+    <h2>My Cats App!</h2>
+    <cats-collection />
+  </div>
 </template>
 
 <script>
-import { inject } from 'vue';
-import { useEnv, envSymbol } from './install';
+import CatsCollection from './components/CatsCollection';
 
 export default {
   name: 'App',
-  created() {
-    console.log({ optionsApi: this.$env });
-  },
-  setup() {
-    const envVariables = inject(envSymbol);
-    console.log(envVariables);
-
-    const envVariables2 = useEnv();
-    return { envVariables2 };
+  components: {
+    'cats-collection': CatsCollection,
   },
 };
 </script>
