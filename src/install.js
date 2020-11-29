@@ -1,13 +1,15 @@
 import { inject } from 'vue';
 import { getVueEnvVariables } from './env-helper';
 
-export const envSymbol = Symbol();
+const envSymbol = Symbol();
 
 export default {
   // eslint-disable-next-line no-unused-vars
   install(app, options) {
     // access process.env object
     const env = process.env;
+
+    console.log(env);
 
     // get an object of all vue variables
     const vueVariables = getVueEnvVariables(env);

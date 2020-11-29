@@ -8,7 +8,7 @@
 <script>
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
-import { useEnv, envSymbol } from '../install';
+import { useEnv } from '../install';
 
 export default {
   name: 'CatsCollection',
@@ -19,7 +19,7 @@ export default {
     },
   },
   setup(props) {
-    const env = useEnv(envSymbol);
+    const env = useEnv();
     let imageUrl = ref('');
 
     const loadNextImage = async () => {

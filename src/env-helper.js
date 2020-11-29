@@ -1,4 +1,5 @@
 function getVueEnvVariables(envVariables) {
+  console.log(envVariables);
   return Object.entries(envVariables).reduce((accum, envVariable) => {
     const vueVariable = getVueEnvVariable(envVariable);
 
